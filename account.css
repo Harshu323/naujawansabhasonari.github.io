@@ -9,7 +9,7 @@ body{
         width: 100%;
       }
       td, th {
-        border: -1% solid #ccc;
+        border: 1% solid #ccc;
         padding: -5%;
         text-align: left;
         min-width: 1%;
