@@ -1,0 +1,26 @@
+body{
+    border: 5%;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    table {
+        
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td, th {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: left;
+        min-width: 10px;
+      }
+      td[contenteditable="true"] {
+        background-color: #f9f9f9;
+      }
+}
+body h3{
+font-size: 200%;
+text-align: center;
+font-family: cursive;
+color: #f8c600;
+}
