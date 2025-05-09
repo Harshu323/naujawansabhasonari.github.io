@@ -28,16 +28,25 @@ a {
   justify-content: space-around;
   font-size: 23px;
 }
-a :hover {
-  color: green;
-}
+
 .Statement {
-  text-align: center;
-}
-.Statement h3 {
-  text-align: center;
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
 }
 
+.Statement img {
+  width: 60%;
+  max-width: 300px;
+  height: auto;
+}
+
+.Statement > div {
+  width: 40%;
+}
 /*.sare{
     height: 350px;
     width: 350px;
@@ -46,30 +55,12 @@ a :hover {
 
 }*/
 .notice {
-  padding-top: -20%;
-  padding-left: -30%;
-
+  flex: 1;
   background-color: rgb(255, 230, 196);
-  width: 30%;
-  height: 60%;
-  padding-bottom: 20%;
-
-  float: right;
-  margin-left: 50%;
   text-align: center;
   font-family: cursive;
-  gap: -10%;
-}
-.gurudwara {
-  padding-left: 5%;
-  padding-top: -30%;
-
-  height: 23%;
-  width: 23%;
-  margin-top: -25%;
-  float: left;
-
-  transform: rotate(-4deg);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .bottom {
@@ -85,4 +76,10 @@ a :hover {
 }
 .bottom img {
   padding-bottom: -1%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  width: 100%;
 }
