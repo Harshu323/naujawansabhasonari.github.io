@@ -11,6 +11,7 @@ body{
       td, th {
         border: 1% solid #ccc;
         padding: -5%;
+          font-size: 50%;
         text-align: left;
         min-width: 1%;
       }
@@ -19,7 +20,7 @@ body{
       }
 }
 body h3{
-font-size: 50%;
+font-size: 100%;
 text-align: center;
 font-family: 'Times New Roman', Times, serif;
 color: #f8c600;
