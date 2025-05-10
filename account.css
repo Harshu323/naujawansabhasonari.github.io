@@ -3,9 +3,9 @@ body{
     padding-top: 5%;
     padding-left: 10%;
     padding-right: 10%;
-    table {
+   /* table {
         
-        /* border-collapse: collapse;*/
+         border-collapse: collapse;
         border: 1px solid black;
         width: 90%;
       }
@@ -21,7 +21,7 @@ body{
         border: 1px solid black;
         background-color: #f9f9f9;
         
-      }
+}}*/
 }
 body h3{
 font-size: 200%;
@@ -29,4 +29,7 @@ text-align: center;
 text-shadow: 10px black;
 font-family: 'Times New Roman', Times, serif;
 color: #f8c600;
+}
+body iframe{
+  font-size: 20%;
 }
