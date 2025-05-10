@@ -1,37 +1,61 @@
 body {
-    padding: 5% 5%; /* Reduced padding for better mobile view */
+    padding: 5% 5%;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fff8dc, #ffe4b5);
+    color: #333;
 }
 
+/* Stylish Heading */
 body h3 {
-    font-size: 6vw; /* Scales based on screen width */
+    font-size: 6vw;
+    
     text-align: center;
-    text-shadow: 1px 1px 2px black;
-    color: #f8c600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #d19f00;
     margin-bottom: 4%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1% 2%;
+    border-radius: 12px;
+    display: inline-block;
 }
 
+/* Container for iframe section */
+.iframe-wrapper {
+    background-color: white;
+    padding: 3%;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+/* Responsive iframe */
 iframe {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 60vw;
+    max-height: 500px;
     border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     display: block;
     margin: 0 auto;
 }
 
-/* Optional: Tablet and larger screen improvements */
+/* Tablet and larger screen tweaks */
 @media screen and (min-width: 768px) {
     body {
-        padding: 5% 10%;
+        padding: 3% 10%;
     }
 
     body h3 {
-        font-size: 200%;
+        font-size: 2.5rem;
     }
 
     iframe {
-        height: 1000px; /* Or another fixed height if needed */
+        height: 500px;
     }
 }
