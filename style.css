@@ -1,121 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffef9;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 5%;
+}
+
+/* ========== Header Section ========== */
 #head {
-    border: 2px solid rgb(255, 221, 0);
-    background-color: black;
+  background-color: black;
+  border: 2px solid rgb(255, 221, 0);
+  padding: 2%;
+  text-align: center;
+}
+
+#head img {
+  width: 30vw;
+  max-width: 150px;
+  height: auto;
 }
 
 #headtxt {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 8vw; /* Scales with screen size */
-    color: bisque;
-    padding: 2% 0;
+  color: bisque;
+  font-size: 8vw;
+  padding-top: 1%;
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
+/* ========== Navigation Buttons ========== */
 #buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-    background-color: rgb(255, 200, 134);
-    font-family: cursive;
-    font-size: 5vw;
-    padding: 4% 0;
-    flex-wrap: wrap;
-    text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8vw;
+  background-color: rgb(255, 200, 134);
+  padding: 3% 0;
+  font-size: 5vw;
+  text-align: center;
+  font-family: cursive;
 }
 
-a:hover {
-    color: green;
+#buttons a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.Statement,
+#buttons a:hover {
+  color: green;
+}
+
+/* ========== About Section ========== */
+.Statement {
+  text-align: center;
+  padding: 5%;
+}
+
 .Statement h3 {
-    text-align: center;
+  font-size: 6vw;
+  color: #f8c600;
+  font-family: cursive;
+  margin-bottom: 2%;
 }
 
+/* ========== Notice Section ========== */
 .notice {
-    background-color: rgb(255, 230, 196);
-    width: 80%;
-    height: 100px;
-   margin-left: 10%;
-    padding-bottom: 40%;
-   
-   
-   /* box-sizing: border-box;
-    margin: 5% auto;
-    padding: 5%;*/
-}
-.notice h2{
- font-family: cursive;
-  text-align: center
-}
-.notice h3{
- font-family: cursive;
-  text-align: center
-}
-.notice p,h5{
-    padding-left: 2%;
-    padding-right: 2%;
+  background-color: rgb(255, 230, 196);
+  margin: 5% auto;
+  padding: 5%;
+  width: 90%;
+  border-radius: 10px;
+  font-family: cursive;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.notice h2,
+.notice h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.notice h5,
+.notice p {
+  padding: 0 5%;
+  font-size: 4vw;
+}
+
+/* ========== Gurudwara Image ========== */
 .gurudwara {
-    display: block;
-    margin: 5% auto;
-    width: 70vw;
-    max-width: 300px;
-    height: auto;
-    transform: rotate(-4deg);
+  display: block;
+  margin: 5% auto;
+  width: 80vw;
+  max-width: 300px;
+  transform: rotate(-4deg);
+  border-radius: 10px;
 }
 
+/* ========== Additional Image ========== */
+img[alt="gurudwara image"]:not(.gurudwara) {
+  display: block;
+  margin: 3% auto;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ========== Bottom Section ========== */
 .bottom {
-    text-align: center;
-    padding: 10% 0;
-}
-
-.bottom a {
-    display: block;
-    font-family: cursive;
-    font-size: 4vw;
-    margin-bottom: 2%;
+  text-align: center;
+  padding: 10% 0;
 }
 
 .bottom img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width: 30px;
+  height: auto;
+  display: block;
+  margin: 0 auto 5px;
 }
 
-/* Responsive Design */
+.bottom a {
+  display: block;
+  font-family: cursive;
+  font-size: 5vw;
+  color: #333;
+  text-decoration: none;
+}
+
+/* ========== Responsive (Tablets & Up) ========== */
 @media screen and (min-width: 768px) {
-    #headtxt {
-        font-size: 50px;
-    }
+  #headtxt {
+    font-size: 50px;
+  }
 
-    #buttons {
-        font-size: 25px;
-        gap: 20%;
-    }
+  #buttons {
+    font-size: 25px;
+    gap: 15%;
+  }
 
-    .notice {
-        float: right;
-        width: 30%;
-        margin-left: 50%;
-        padding: 5%;
-        height: auto;
-    }
+  .Statement h3 {
+    font-size: 30px;
+  }
 
-    .gurudwara {
-        float: left;
-        width: 23%;
-        margin-top: 0;
-    }
+  .notice {
+    width: 40%;
+    float: right;
+    margin: 3%;
+    padding: 4%;
+  }
 
-    .bottom a {
-        font-size: 18px;
-    }
+  .notice h5,
+  .notice p {
+    font-size: 16px;
+  }
+
+  .gurudwara {
+    width: 30%;
+    float: left;
+    margin: 3%;
+  }
+
+  .bottom a {
+    font-size: 18px;
+  }
 }
