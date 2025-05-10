@@ -1,91 +1,121 @@
-#head{
-    border: 2px solid;
-    border-color: rgb(255, 221, 0);
-background-color: black;
+#head {
+    border: 2px solid rgb(255, 221, 0);
+    background-color: black;
 }
-#headtxt{
-    
-    margin-left: 30%;
-    margin-top: -5%;
-    margin-bottom: 2%;
-    font-size: 50px;
+
+#headtxt {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 8vw; /* Scales with screen size */
     color: bisque;
+    padding: 2% 0;
 }
-a{
+
+a {
     color: black;
+    text-decoration: none;
 }
-#buttons{
-    padding-left: 30%;
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    background-color: rgb(255, 200, 134);
     font-family: cursive;
-   background-color: rgb(255, 200, 134); 
-   color: black;
-   display: flex; gap: 20%;
-   text-align: center;
-   font-size: 25px;
-
-}
-a :hover{
- color: green;
-}
-.Statement{
-text-align: center;
-
-}
-.Statement h3{
+    font-size: 5vw;
+    padding: 4% 0;
+    flex-wrap: wrap;
     text-align: center;
 }
 
+a:hover {
+    color: green;
+}
 
-/*.sare{
-    height: 350px;
-    width: 350px;
-    align-items: center;
+.Statement,
+.Statement h3 {
+    text-align: center;
+}
 
-
-}*/
-.notice{
-    padding-top: -20%;
-    padding-left: -30%;
-
+.notice {
     background-color: rgb(255, 230, 196);
-    width: 30%;
-  height: 60%;
-  padding-bottom: 20%;
-  
-   float: right;
-  margin-left: 50%;
-  text-align: center;
-  font-family: cursive;
-  gap: -10%;
-
-  
-}
-.gurudwara{
-    padding-left: 5%;
-    padding-top: -30%;
-    
-     height: 23%;
-     width: 23%;
-    margin-top: -25%;
-     float:left ;
-     
-     transform: rotate(-4deg);
+    width: 80%;
+    height: 100px;
+   margin-left: 10%;
+    padding-bottom: 40%;
    
- }
-
-
-.bottom{
-    padding-left: 50%;
-    padding-top: 30%;
-    align-items: center;
+   
+   /* box-sizing: border-box;
+    margin: 5% auto;
+    padding: 5%;*/
 }
-.bottom a{
-    padding-bottom: 2%;
+.notice h2{
+ font-family: cursive;
+  text-align: center
+}
+.notice h3{
+ font-family: cursive;
+  text-align: center
+}
+.notice p,h5{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.gurudwara {
+    display: block;
+    margin: 5% auto;
+    width: 60vw;
+    max-width: 300px;
+    height: auto;
+    transform: rotate(-4deg);
+}
+
+.bottom {
+    text-align: center;
+    padding: 10% 0;
+}
+
+.bottom a {
+    display: block;
     font-family: cursive;
-
-    
-    font-size: 18px;
+    font-size: 4vw;
+    margin-bottom: 2%;
 }
-.bottom img{
-    padding-bottom: -1%;
+
+.bottom img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+    #headtxt {
+        font-size: 50px;
+    }
+
+    #buttons {
+        font-size: 25px;
+        gap: 20%;
+    }
+
+    .notice {
+        float: right;
+        width: 30%;
+        margin-left: 50%;
+        padding: 5%;
+        height: auto;
+    }
+
+    .gurudwara {
+        float: left;
+        width: 23%;
+        margin-top: 0;
+    }
+
+    .bottom a {
+        font-size: 18px;
+    }
 }
