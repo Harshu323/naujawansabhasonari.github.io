@@ -1,35 +1,37 @@
-body{
-    border: 5%;
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-   /* table {
-        
-         border-collapse: collapse;
-        border: 1px solid black;
-        width: 90%;
-      }
-      td, th {
-        border: 1% solid #000000;
-        padding: -5%;
-          font-size: 150%;
-        text-align: left;
-        min-width: 1%;
-      
-      }
-      td[contenteditable="true"] {
-        border: 1px solid black;
-        background-color: #f9f9f9;
-        
-}}*/
+body {
+    padding: 5% 5%; /* Reduced padding for better mobile view */
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body h3{
-font-size: 200%;
-text-align: center;
-text-shadow: 10px black;
-font-family: 'Times New Roman', Times, serif;
-color: #f8c600;
+
+body h3 {
+    font-size: 6vw; /* Scales based on screen width */
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    color: #f8c600;
+    margin-bottom: 4%;
 }
-body iframe{
-  font-size: 20%;
+
+iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Optional: Tablet and larger screen improvements */
+@media screen and (min-width: 768px) {
+    body {
+        padding: 5% 10%;
+    }
+
+    body h3 {
+        font-size: 200%;
+    }
+
+    iframe {
+        height: 500px; /* Or another fixed height if needed */
+    }
 }
