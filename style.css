@@ -1,171 +1,74 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ========== Smooth Transitions ========== */
+a, h2, h3, h5, p {
+  transition: all 0.3s ease-in-out;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fffef9;
-  color: #333;
-  line-height: 1.6;
-  padding-bottom: 5%;
-}
-
-/* ========== Header Section ========== */
-#head {
-  background-color: black;
-  border: 2px solid rgb(255, 221, 0);
-  padding: 2%;
-  text-align: center;
-}
-
-#head img {
-  width: 30vw;
-  max-width: 150px;
-  height: auto;
-}
-
-#headtxt {
-  color: bisque;
-  font-size: 8vw;
-  padding-top: 1%;
-}
-
-/* ========== Navigation Buttons ========== */
-#buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8vw;
-  background-color: rgb(255, 200, 134);
-  padding: 3% 0;
-  font-size: 5vw;
-  text-align: center;
-  font-family: cursive;
-}
-
+/* ========== Button-like Navigation ========== */
 #buttons a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
 }
 
 #buttons a:hover {
-  color: green;
+  background-color: #ffe79a;
+  color: black;
+  transform: scale(1.05);
 }
 
-/* ========== About Section ========== */
-.Statement {
-  text-align: center;
-  padding: 5%;
-}
 
-.Statement h3 {
-  font-size: 6vw;
-  color: #f8c600;
-  font-family: cursive;
-  margin-bottom: 2%;
-}
-
-/* ========== Notice Section ========== */
-.notice {
-  background-color: rgb(255, 230, 196);
-  margin: 5% auto;
-  padding: 5%;
-  width: 90%;
-  border-radius: 10px;
-  font-family: cursive;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.notice h2,
-.notice h3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.notice h5,
-.notice p {
-  padding: 0 5%;
-  font-size: 4vw;
-}
-
-/* ========== Gurudwara Image ========== */
 .gurudwara {
-  display: block;
+  transition: all 0.4s ease-in-out;
+  filter: grayscale(20%);
+}
+
+.gurudwara:hover {
+  filter: grayscale(0%);
+  transform: rotate(0deg) scale(1.05);
+}
+
+
+/* ========== Section Enhancements ========== */
+.Statement, .notice {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 4%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   margin: 5% auto;
-  width: 80vw;
-  max-width: 300px;
-  transform: rotate(-4deg);
-  border-radius: 10px;
+  width: 90%;
 }
 
-/* ========== Additional Image ========== */
-img[alt="gurudwara image"]:not(.gurudwara) {
-  display: block;
-  margin: 3% auto;
-  width: 80%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
+/* ========== Header Animation ========== */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* ========== Bottom Section ========== */
-.bottom {
-  text-align: center;
-  padding: 10% 0;
+#headtxt {
+  animation: slideFadeIn 1s ease-in-out;
 }
 
-.bottom img {
-  width: 30px;
-  height: auto;
-  display: block;
-  margin: 0 auto 5px;
+/* ========== Footer Enhancements ========== */
+.bottom a:hover {
+  color: #f89c1f;
+  transform: scale(1.05);
 }
 
-.bottom a {
-  display: block;
-  font-family: cursive;
-  font-size: 5vw;
-  color: #333;
-  text-decoration: none;
-}
-
-/* ========== Responsive (Tablets & Up) ========== */
-@media screen and (min-width: 768px) {
-  #headtxt {
-    font-size: 50px;
+/* ========== Responsive Design Tweaks ========== */
+@media screen and (min-width: 1024px) {
+  .Statement, .notice {
+    width: 60%;
   }
 
   #buttons {
-    font-size: 25px;
-    gap: 15%;
-  }
-
-  .Statement h3 {
-    font-size: 30px;
-  }
-
-  .notice {
-    width: 40%;
-    float: right;
-    margin: 3%;
-    padding: 4%;
-  }
-
-  .notice h5,
-  .notice p {
-    font-size: 16px;
-  }
-
-  .gurudwara {
-    width: 30%;
-    float: left;
-    margin: 3%;
-  }
-
-  .bottom a {
-    font-size: 18px;
+    gap: 10%;
   }
 }
