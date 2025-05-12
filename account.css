@@ -1,49 +1,43 @@
-/* Reset and Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ========== Global Reset and Body Styles ========== */
 body {
-    padding: 5%;
+    padding: 5% 5%;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #fff8dc, #ffe4b5);
     color: #333;
-    line-height: 1.6;
 }
 
-/* Stylish Heading */
+/* ========== Stylish Heading ========== */
 body h3 {
-    font-size: 6vw;
+    font-size: 6vw; /* Scales with screen size */
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: #d19f00;
-    margin: 5% auto;
+    margin-bottom: 4%;
     font-weight: 600;
     letter-spacing: 1px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 1% 3%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1% 2%;
     border-radius: 12px;
     display: inline-block;
-    max-width: 90%;
 }
 
-/* Container for iframe section */
+/* ========== Container for iframe Section ========== */
 .iframe-wrapper {
     background-color: white;
-    padding: 5%;
+    padding: 3%;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 900px;
 }
 
-/* Responsive iframe */
+/* ========== Responsive iframe ========== */
 iframe {
-    width: 100%;
-    height: 60vw;
-    max-height: 500px;
+    width: 100%; /* Make iframe width responsive */
+    height: 50vw; /* Make height responsive with respect to screen size */
+    max-height: 500px; /* Max height for larger screens */
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -51,33 +45,39 @@ iframe {
     margin: 0 auto;
 }
 
-/* Tablet and larger screen tweaks */
+/* ========== Media Queries for Tablet and Larger Screens ========== */
 @media screen and (min-width: 768px) {
     body {
         padding: 3% 10%;
     }
 
     body h3 {
-        font-size: 2.5rem;
-        padding: 1% 4%;
+        font-size: 2.5rem; /* Fixed size for larger screens */
+    }
+
+    .iframe-wrapper {
+        width: 80%; /* Make iframe wrapper more compact on larger screens */
     }
 
     iframe {
-        height: 450px;
+        height: 450px; /* Set fixed height on larger screens */
+        width: 80%; /* Fixed width */
     }
 }
 
-/* Desktop/Large Screens */
-@media screen and (min-width: 1024px) {
-    .iframe-wrapper {
-        padding: 3%;
+/* ========== Media Queries for Mobile Devices (Small Screens) ========== */
+@media screen and (max-width: 767px) {
+    body h3 {
+        font-size: 8vw; /* Larger font size for mobile screens */
     }
 
-    body h3 {
-        font-size: 2.8rem;
+    .iframe-wrapper {
+        padding: 2%; /* Less padding for smaller screens */
+        width: 95%; /* Take up most of the screen width */
     }
 
     iframe {
-        height: 500px;
+        height: 60vw; /* Increase height on smaller screens */
+        width: 95%; /* Make iframe width take up most of the screen */
     }
 }
