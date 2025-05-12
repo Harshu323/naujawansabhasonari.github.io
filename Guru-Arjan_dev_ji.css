@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Title and Subheadings */
+h1, h2, h3, h4, h5 {
+  font-family: 'Georgia', serif;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+h2 {
+  font-size: 30px;
+  color: #004b8d;
+}
+
+h3 {
+  font-size: 24px;
+  color: #007acc;
+}
+
+h4 {
+  font-size: 20px;
+  color: #005599;
+}
+
+h5 {
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Image Styling */
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 40px;
+}
+
+section h5 {
+  margin-bottom: 10px;
+}
+
+/* Cards for Sections (Optional) */
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Blockquote for Special Quotes */
+blockquote {
+  background-color: #eeeeee;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-left: 4px solid #0066cc;
+  font-style: italic;
+  color: #666;
+}
+
+blockquote p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Button Styling */
+button {
+  background-color: #0066cc;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004b8d;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
+
+footer a {
+  color: #003366;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.from{
+   float: inline-end;
+    margin-top: 5%;
+   margin-right: 15%;
+}
