@@ -4,7 +4,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #fff8dc, #ffe4b5);
+    background : linear-gradient(to right, #fff8dc, #ffe4b5);
     color: #333;
 }
 
@@ -68,16 +68,18 @@ iframe {
 /* ========== Media Queries for Mobile Devices (Small Screens) ========== */
 @media screen and (max-width: 767px) {
     body h3 {
-        font-size: 8vw; /* Larger font size for mobile screens */
+        font-size: 8vw;
     }
 
     .iframe-wrapper {
-        padding: 2%; /* Less padding for smaller screens */
-        width: 95%; /* Take up most of the screen width */
+        padding: 2%;
+        width: 95%;
     }
 
     iframe {
-        height: 60vw; /* Increase height on smaller screens */
-        width: 95%; /* Make iframe width take up most of the screen */
+        width: 100%;
+        height: 60vh; /* Changed from 60vw to 60vh for better vertical space */
+        min-height: 300px; /* Ensures minimum visibility */
     }
 }
+
