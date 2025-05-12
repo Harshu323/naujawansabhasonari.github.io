@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nawjawan sabha sonari</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naujawan Sabha Sonari</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <div id="head">
-    <img src="logo.png" alt="logo" width="150" height="150">
-  <h2 id="headtxt">Naujawan Sabha Sonari</h2>
-  
- </div>
- <div id="buttons">
+    <img src="images/logo.png" alt="logo" />
+    <h2 id="headtxt">Naujawan Sabha Sonari</h2>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div id="buttons">
     <a href="accounts.html">Accounts</a>
     <a href="images.html">Images</a>
-    <a href="donate.html">Donate US</a>
+    <a href="donate.html">Donate Us</a>
+    <a href="javascript:void(0)" id="historyBtn">History</a>
   </div>
+
+  <!-- Sidebar -->
+  <div id="historySidebar" class="sidebar">
+    <h3 class="sidebar-header">Historic Events</h3>
+    <div class="history-content">
+      <a href="guru-arjan-dev-ji.html" class="sidebar-button">Guru Arjan Dev Ji</a>
+      <a href="1984.html" class="sidebar-button">1984</a>
+    </div>
+    <button class="close-sidebar" onclick="toggleSidebar()">Close</button>
+    <p>Here will be the content of the History of Naujawan Sabha Sonari.</p>
+  </div>
+
+  <!-- About Us Section -->
   <div class="Statement">
-    <h3>About us</h3>
+    <h3>About Us</h3>
     <p>We are the Sikh Youth of Sonari</p>
-    <p>Our main motive to stay grounded and connected with our sikhi roots and etc we can write here as our details of</p>
-
+    <p>Our main motive is to stay grounded and connected with our Sikhi roots.</p>
   </div>
- 
-  <!-- <img src="images/sare.jpg" alt="gurudwara image" class="sare">-->
+
+  <!-- Notice Section -->
   <div class="notice">
-    <h2 >Notice</h2>
-      
-      <h5 >Dhan Guru arjan dev ji di sahidi nu samarpit Sonari Naujawan walo 5 sunday mithe jal di seva la rahe ye</h5>
-     <p>1. near gurudwara sahib sonari 20th april 2025</p>
-     <p> 2. near ram mandir 27th april 2025</p>
-     <p> 3. near vishwakarma mandir auto stand 4th may 2025</p> 
-    <p> 4. near new police station 11th may 2025</p> 
+    <h2>Notice</h2>
     
-    <h3 >Upcoming Sewas</h3>
-  
-    
-     <p>5.Yet to decide 18th may 2025</p> 
-  
-    
-    
+    <h5>Dhan Guru Arjan Dev Ji di sahidi nu samarpit Sonari Naujawan walo 5 Sunday mithe jal di seva la rahe ye</h5>
+    <p>1. Near Gurudwara Sahib Sonari - 20th April 2025</p>
+    <p>2. Near Ram Mandir - 27th April 2025</p>
+    <p>3. Near Vishwakarma Mandir Auto Stand - 4th May 2025</p>
+    <p>4. Near New Police Station - 11th May 2025</p>
+
+    <h3>Upcoming Sewas</h3>
+    <p>5. Circuit House Area - 18th May 2025</p>
   </div>
-  <img src="gurudwara sahib.jpg" alt="gurudwara image" class="gurudwara">
-   
+
+  <!-- Gurudwara Image -->
+  <img src="images/gurudwara sahib.jpg" alt="gurudwara image" class="gurudwara" />
+
+  <!-- Bottom/Instagram -->
   <div class="bottom">
-<img  src="instalogo.png" alt="insta logo" width="20px" class="inlog" >
-
-<a href="https://www.instagram.com/naujawan_sabha_sonari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="linksta">Follow Us</a>
-
+    <img src="images/instalogo.png" alt="insta logo" class="inlog" />
+    <a href="https://www.instagram.com/naujawan_sabha_sonari" class="linksta">Follow Us</a>
   </div>
+
+  <!-- Script -->
+  <script>
+     const historyBtn = document.getElementById('historyBtn');
+    const sidebar = document.getElementById('historySidebar');
+    const closeBtn = document.querySelector('.close-sidebar');
+
+    historyBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      sidebar.classList.toggle('show-sidebar');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('show-sidebar');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && e.target !== historyBtn) {
+        sidebar.classList.remove('show-sidebar');
+      }
+    });
+  </script>
 </body>
 </html>
