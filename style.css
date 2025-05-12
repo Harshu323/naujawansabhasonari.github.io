@@ -68,7 +68,7 @@
 
 /* ========== Notice Section ========== */
 .notice {
-  background-color: rgb(255, 230, 196);
+  background:linear-gradient(to left, #fff8dc,  rgb(255, 231, 202));
   margin: 5% auto;
   padding: 4%;
   width: 80%;
