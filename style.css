@@ -1,74 +1,178 @@
-/* ========== Smooth Transitions ========== */
-a, h2, h3, h5, p {
-  transition: all 0.3s ease-in-out;
+
+/* ========== Header Section ========== */
+#head {
+  background-color: black;
+  border: 2px solid rgb(255, 221, 0);
+  padding: 2%;
+  text-align: center;
 }
 
-/* ========== Button-like Navigation ========== */
-#buttons a {
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  font-weight: 600;
-}
-
-#buttons a:hover {
-  background-color: #ffe79a;
-  color: black;
-  transform: scale(1.05);
-}
-
-
-.gurudwara {
-  transition: all 0.4s ease-in-out;
-  filter: grayscale(20%);
-}
-
-.gurudwara:hover {
-  filter: grayscale(0%);
-  transform: rotate(0deg) scale(1.05);
-}
-
-
-/* ========== Section Enhancements ========== */
-.Statement, .notice {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 4%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  margin: 5% auto;
-  width: 90%;
-}
-
-/* ========== Header Animation ========== */
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#head img {
+  width: 20vw; /* Reduced width to make it more balanced */
+  max-width: 150px;
+  height: auto;
 }
 
 #headtxt {
-  animation: slideFadeIn 1s ease-in-out;
+  color: bisque;
+  font-size: 8vw;
+  padding-top: 1%;
+  font-family: 'Roboto', sans-serif; /* Modern, clean font for the heading */
 }
 
-/* ========== Footer Enhancements ========== */
-.bottom a:hover {
-  color: #f89c1f;
-  transform: scale(1.05);
+/* ========== Navigation Buttons ========== */
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6vw; /* Slightly reduced gap for more compact buttons */
+  background-color: rgb(255, 200, 134);
+  padding: 3% 0;
+  font-size: 5vw;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 30px; /* Rounded corners for the button container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
-/* ========== Responsive Design Tweaks ========== */
-@media screen and (min-width: 1024px) {
-  .Statement, .notice {
-    width: 60%;
+#buttons a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold; /* Bolder font to make links stand out */
+   padding: 1em 2em; /* Bigger buttons for better touch targets */
+  border-radius: 20px; /* Rounded corners for individual buttons */
+  transition: all 0.3s ease-in-out; /* Smooth hover transition */
+
+}
+
+#buttons a:hover {
+  background-color: rgb(0, 0, 0); /* Dark background on hover */
+  color: rgb(255, 255, 255); /* Highlight color */
+  transform: translateY(-5px); /* Slight hover lift effect */
+}
+
+/* ========== About Section ========== */
+.Statement {
+  text-align: center;
+  padding: 5%;
+}
+
+.Statement h3 {
+  font-size: 6vw;
+  color: #f8c600;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2%;
+  font-weight: bold;
+}
+
+/* ========== Notice Section ========== */
+.notice {
+  background-color: rgb(255, 230, 196);
+  margin: 5% auto;
+  padding: 4%;
+  width: 80%;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.notice h2,
+.notice h3 {
+  text-align: center;
+  font-size: 3vw;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.notice h5,
+.notice p {
+  padding: 0 5%;
+  font-size: 4vw;
+}
+
+/* ========== Gurudwara Image ========== */
+.gurudwara {
+  display: block;
+  margin: 5% auto;
+  width: 70vw; /* Adjusted width for better visual balance */
+  max-width: 300px;
+  transform: rotate(-4deg);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+.gurudwara:hover {
+  transform: rotate(0deg); /* Reset rotation on hover */
+}
+
+/* ========== Additional Image ========== */
+img[alt="gurudwara image"]:not(.gurudwara) {
+  display: block;
+  margin: 3% auto;
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ========== Bottom Section ========== */
+.bottom {
+  text-align: center;
+  padding: 10% 0;
+}
+
+.bottom img {
+  width: 30px;
+  height: auto;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.bottom a {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4vw;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ========== Responsive (Tablets & Up) ========== */
+@media screen and (min-width: 768px) {
+  #headtxt {
+    font-size: 50px;
   }
 
   #buttons {
-    gap: 10%;
+    font-size: 20px;
+    gap: 15%;
+  }
+
+  .Statement h3 {
+    font-size: 30px;
+  }
+
+  .notice {
+    width: 40%;
+    float: right;
+    margin: 3%;
+    padding: 4%;
+  }
+
+  .notice h5,
+  .notice p {
+    font-size: 16px;
+  }
+
+  .gurudwara {
+    width: 30%;
+    float: left;
+    margin: 3%;
+  }
+
+  .bottom a {
+    font-size: 18px;
   }
 }
