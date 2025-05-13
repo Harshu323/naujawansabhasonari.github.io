@@ -174,15 +174,15 @@ body {
 
 .notice h2,
 .notice h3 {
-  font-size: 3vw;
-  margin-bottom: 10px;
+  font-size: 5vw;
+  margin: 10px;
 }
 
 .notice h5,
 .notice p {
-  font-size: 4vw;
+  font-size: 3vw;
   color: #555;
-  padding: 0 5%;
+  
 }
 
 /* Gurudwara Image */
