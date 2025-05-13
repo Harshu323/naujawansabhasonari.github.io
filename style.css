@@ -1,11 +1,8 @@
 /* Global Styles */
 * {
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
-  
-  
 }
 
 body {
@@ -19,7 +16,6 @@ body {
   background-color: #000;
   border-bottom: 2px solid rgb(255, 221, 0);
   padding: 2%;
- 
   text-align: center;
 }
 
@@ -36,7 +32,7 @@ body {
 
 #headtxt {
   color: bisque;
-  font-size: 8vw;
+  font-size: clamp(24px, 6vw, 50px);
   font-weight: 600;
   padding-top: 1%;
   text-transform: uppercase;
@@ -48,11 +44,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6nw;
+  gap: 3vw;
   background-color: rgb(255, 200, 134);
   padding: 1%;
-  
-  font-size: 4vw;
+  font-size: clamp(14px, 3.5vw, 18px);
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -72,23 +67,18 @@ body {
   transform: translateY(-5px);
 }
 
-/* Sidebar */
-/* Sidebar (Floating under History button) */
-
- #historyBtn {
-  
+/* History Button */
+#historyBtn {
   background-color: #ffcc80;
   color: #000;
-  font-size: 1.4vw;
- 
+  font-size: clamp(12px, 1.5vw, 18px);
   font-weight: bold;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  position:relative;
+  position: relative;
   z-index: 10;
-
 }
 
 #historyBtn:hover {
@@ -96,17 +86,13 @@ body {
   transform: scale(1.05);
 }
 
-/* ========== Dropdown Popup ========== */
-/* Wrapper for proper positioning */
+/* Dropdown */
 .history-wrapper {
   margin-top: 1%;
   position: relative;
   display: inline-block;
 }
 
-/* Button is already styled (leave #historyBtn as-is) */
-
-/* New Popup Dropdown */
 .popup-dropdown {
   position: absolute;
   top: 130%;
@@ -119,7 +105,6 @@ body {
   display: none;
   flex-direction: column;
   gap: 10px;
-  width: max-content;
   min-width: 180px;
   z-index: 9;
 }
@@ -132,21 +117,13 @@ body {
   border-radius: 8px;
   font-weight: 600;
   text-align: center;
+  font-size: clamp(12px, 3.5vw, 16px);
   transition: background-color 0.3s ease;
-  font-size: 3.5vw;
 }
 
 .popup-dropdown a:hover {
   background-color: #ffb74d;
 }
-
-/* Desktop Adjustments */
-@media screen and (min-width: 768px) {
-  .popup-dropdown a {
-    font-size: 1rem;
-  }
-}
-
 
 /* About Section */
 .Statement {
@@ -155,7 +132,7 @@ body {
 }
 
 .Statement h3 {
-  font-size: 6vw;
+  font-size: clamp(20px, 5vw, 30px);
   color: #f8c600;
   font-weight: 700;
   margin-bottom: 2%;
@@ -174,15 +151,14 @@ body {
 
 .notice h2,
 .notice h3 {
-  font-size: 4vw;
+  font-size: clamp(18px, 4vw, 28px);
   margin: 10px;
 }
 
 .notice h5,
 .notice p {
-  font-size: 3vw;
+  font-size: clamp(12px, 3vw, 16px);
   color: #555;
-  
 }
 
 /* Gurudwara Image */
@@ -200,7 +176,7 @@ body {
   transform: rotate(0deg);
 }
 
-/* Footer / Bottom */
+/* Footer */
 .bottom {
   text-align: center;
   padding: 10% 0;
@@ -212,40 +188,19 @@ body {
 }
 
 .bottom a {
-  font-size: 4vw;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: clamp(14px, 4vw, 18px);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #333;
-
 }
 
-/* Desktop Styles */
+/* Desktop Layout Adjustments Only */
 @media screen and (min-width: 768px) {
-  #headtxt {
-    font-size: 50px;
-  }
-
-  #buttons {
-    font-size: 15px;
-    gap: 5%;
-  }
-
-  .Statement h3 {
-    font-size: 30px;
-  }
-
   .notice {
     width: 40%;
     float: right;
     margin: 3%;
-    padding: 4%;
-  }
-
-
-  .notice h5,
-  .notice p {
-    font-size: 16px;
   }
 
   .gurudwara {
@@ -253,93 +208,4 @@ body {
     float: left;
     margin: 3%;
   }
-
-  .bottom a {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 768px) {
-   #buttons {
-    font-size: 3nw;
-    gap: 3nw;
-  }
- .history-wrapper{
-    font-size: 3nw;
-  }
-  .popup-dropdown a {
-    font-size: 1rem;
-  }
-}
-
-
-/* About Section */
-.Statement {
-  text-align: center;
-  padding: 5%;
-}
-
-.Statement h3 {
-  font-size: 6vw;
-  color: #f8c600;
-  font-weight: 700;
-  margin-bottom: 2%;
-}
-
-/* Notice */
-.notice {
-  background: linear-gradient(to left, #fff8dc, rgb(255, 231, 202));
-  margin: 5% auto;
-  padding: 4%;
-  width: 80%;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.notice h2,
-.notice h3 {
-  font-size: 4vw;
-  margin: 10px;
-}
-
-.notice h5,
-.notice p {
-  font-size: 3vw;
-  color: #555;
-  
-}
-
-/* Gurudwara Image */
-.gurudwara {
-  display: block;
-  margin: 5% auto;
-  width: 70vw;
-  max-width: 300px;
-  transform: rotate(-4deg);
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gurudwara:hover {
-  transform: rotate(0deg);
-}
-
-/* Footer / Bottom */
-.bottom {
-  text-align: center;
-  padding: 10% 0;
-}
-
-.bottom img {
-  width: 30px;
-  margin-bottom: -0.5%;
-}
-
-.bottom a {
-  font-size: 4vw;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-
 }
