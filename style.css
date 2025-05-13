@@ -174,7 +174,7 @@ body {
 
 .notice h2,
 .notice h3 {
-  font-size: 5vw;
+  font-size: 4vw;
   margin: 10px;
 }
 
@@ -242,6 +242,7 @@ body {
     padding: 4%;
   }
 
+
   .notice h5,
   .notice p {
     font-size: 16px;
@@ -256,4 +257,87 @@ body {
   .bottom a {
     font-size: 18px;
   }
+}
+@media screen and (max-width: 768px) {
+   #buttons {
+    font-size: 10px;
+    gap: 5%;
+  }
+
+  .popup-dropdown a {
+    font-size: 1rem;
+  }
+}
+
+
+/* About Section */
+.Statement {
+  text-align: center;
+  padding: 5%;
+}
+
+.Statement h3 {
+  font-size: 6vw;
+  color: #f8c600;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+
+/* Notice */
+.notice {
+  background: linear-gradient(to left, #fff8dc, rgb(255, 231, 202));
+  margin: 5% auto;
+  padding: 4%;
+  width: 80%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice h2,
+.notice h3 {
+  font-size: 4vw;
+  margin: 10px;
+}
+
+.notice h5,
+.notice p {
+  font-size: 3vw;
+  color: #555;
+  
+}
+
+/* Gurudwara Image */
+.gurudwara {
+  display: block;
+  margin: 5% auto;
+  width: 70vw;
+  max-width: 300px;
+  transform: rotate(-4deg);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gurudwara:hover {
+  transform: rotate(0deg);
+}
+
+/* Footer / Bottom */
+.bottom {
+  text-align: center;
+  padding: 10% 0;
+}
+
+.bottom img {
+  width: 30px;
+  margin-bottom: -0.5%;
+}
+
+.bottom a {
+  font-size: 4vw;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+
 }
