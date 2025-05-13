@@ -14,23 +14,21 @@
   </div>
 
   <!-- Navigation Buttons -->
-  <div id="buttons">
-    <a href="accounts.html">Accounts</a>
-    <a href="images.html">Images</a>
-    <a href="donate.html">Donate Us</a>
+<div id="buttons">
+  <a href="accounts.html">Accounts</a>
+  <a href="images.html">Images</a>
+  <a href="donate.html">Donate Us</a>
+  
+  <!-- Wrapper for positioning the popup -->
+  <div class="history-wrapper">
     <a href="javascript:void(0)" id="historyBtn">History</a>
-  </div>
-
-  <!-- Sidebar -->
-  <div id="historySidebar" class="sidebar">
-    <h3 class="sidebar-header">Historic Events</h3>
-    <div class="history-content">
-      <a href="guru-arjan-dev-ji.html" class="sidebar-button">Guru Arjan Dev Ji</a>
-      <a href="1984.html" class="sidebar-button">1984</a>
+    <div class="popup-dropdown" id="historyPopup">
+      <a href="guru-arjan-dev-ji.html">Guru Arjan Dev Ji</a>
+      <a href="1984.html">1984</a>
     </div>
-    <button class="close-sidebar" onclick="toggleSidebar()">Close</button>
-    <p>Here will be the content of the History of Naujawan Sabha Sonari.</p>
   </div>
+</div>
+
 
   <!-- About Us Section -->
   <div class="Statement">
@@ -63,25 +61,22 @@
   </div>
 
   <!-- Script -->
-  <script>
-     const historyBtn = document.getElementById('historyBtn');
-    const sidebar = document.getElementById('historySidebar');
-    const closeBtn = document.querySelector('.close-sidebar');
+ <script>
+  const historyBtn = document.getElementById("historyBtn");
+  const popup = document.getElementById("historyPopup");
 
-    historyBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      sidebar.classList.toggle('show-sidebar');
-    });
+  historyBtn.addEventListener("click", (e) => {
+    popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+  });
 
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('show-sidebar');
-    });
+  window.addEventListener("click", function (e) {
+    if (!historyBtn.contains(e.target) && !popup.contains(e.target)) {
+      popup.style.display = "none";
+    }
+  });
+</script>
 
-    document.addEventListener('click', (e) => {
-      if (!sidebar.contains(e.target) && e.target !== historyBtn) {
-        sidebar.classList.remove('show-sidebar');
-      }
-    });
-  </script>
+
+
 </body>
 </html>
