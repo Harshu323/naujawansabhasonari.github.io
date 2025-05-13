@@ -20,8 +20,6 @@ body {
   border-bottom: 2px solid rgb(255, 221, 0);
   padding: 2%;
  
-  margin-left: -2%;
-  margin-right: -2%;
   text-align: center;
 }
 
@@ -50,9 +48,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6vw;
+  gap: 6nw;
   background-color: rgb(255, 200, 134);
-  padding: 3% 0;
+  padding: 1%;
+  
   font-size: 4vw;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -75,132 +74,79 @@ body {
 
 /* Sidebar */
 /* Sidebar (Floating under History button) */
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      border-radius: 10%;
-      
-    }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-      padding: 2%px;
-      min-height: 100vh;
-       border-radius: 10%;
-    }
+ #historyBtn {
+  
+  background-color: #ffcc80;
+  color: #000;
+  font-size: 1.4vw;
+ 
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position:relative;
+  z-index: 10;
 
-    /* History Button */
-    #historyBtn {
-      background-color:rgb(255, 200, 134);
-      color: #333;
-      font-size: 18px;
-      padding: 12px 24px;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      border: none;
-      transition: all 0.3s ease-in-out;
-    }
+}
 
-    #historyBtn:hover {
-      background-color: #ff5722;
-      color: #fff;
-      transform: scale(1.05);
-    }
+#historyBtn:hover {
+  background-color: #ffa726;
+  transform: scale(1.05);
+}
 
-    /* Sidebar - Default hidden */
-    .sidebar {
-      background-color: #fff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      padding: 20px;
-      z-index: 999;
-      display: none;
-      height:fit-content;
-    }
+/* ========== Dropdown Popup ========== */
+/* Wrapper for proper positioning */
+.history-wrapper {
+  margin-top: 1%;
+  position: relative;
+  display: inline-block;
+}
 
-    .sidebar-header {
-      font-size: 20px;
-      font-weight: bold;
-      background-color: #fade89;
-      padding-top: 10px;
-      margin-bottom: 15px;
-      text-align: center;
-      border: 2px solid #000000;
-      padding-bottom: 10px;
-    }
+/* Button is already styled (leave #historyBtn as-is) */
 
-    .sidebar-button {
-      display: block;
-      text-decoration: none;
-      background-color: #ffe082;
-      color: black;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 8px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s ease-in-out;
-    }
+/* New Popup Dropdown */
+.popup-dropdown {
+  position: absolute;
+  top: 130%;
+  left: -10%;
+  background-color: #fff8dc;
+  border: 2px solid #ffd54f;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: max-content;
+  min-width: 180px;
+  z-index: 9;
+}
 
-    .sidebar-button:hover {
-      background-color: #ffcc80;
-      transform: translateX(5px);
-    }
+.popup-dropdown a {
+  text-decoration: none;
+  background-color: #ffe082;
+  color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-size: 3.5vw;
+}
 
-    .close-sidebar {
-      background-color: #f44336;
-      color: white;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      font-size: 16px;
-      margin-top: 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.popup-dropdown a:hover {
+  background-color: #ffb74d;
+}
 
-    .close-sidebar:hover {
-      background-color: #d32f2f;
-    }
+/* Desktop Adjustments */
+@media screen and (min-width: 768px) {
+  .popup-dropdown a {
+    font-size: 1rem;
+  }
+}
 
-    /* Mobile View */
-    @media screen and (max-width: 768px) {
-      .sidebar {
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        transition: bottom 0.3s ease-in-out;
-        border-radius: 20px 20px 0 0;
-      }
-
-      .show-sidebar {
-        display: block;
-        height: fit-content;
-        bottom: 0;
-      }
-    }
-
-    /* Desktop View */
-    @media screen and (min-width: 769px) {
-      .sidebar {
-        position: fixed;
-        top: 0;
-        right: -350px;
-        width: 300px;
-        height: 100%;
-        transition: right 0.3s ease-in-out;
-        border-radius: 0;
-      }
-
-      .show-sidebar {
-        display: block;
-        right: 0;
-      }
-    }
 
 /* About Section */
 .Statement {
@@ -262,14 +208,16 @@ body {
 
 .bottom img {
   width: 30px;
-  margin-bottom: 5px;
+  margin-bottom: -0.5%;
 }
 
 .bottom a {
   font-size: 4vw;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
   text-decoration: none;
   color: #333;
+
 }
 
 /* Desktop Styles */
