@@ -260,10 +260,12 @@ body {
 }
 @media screen and (max-width: 768px) {
    #buttons {
-    font-size: 10px;
-    gap: 5%;
+    font-size: 3nw;
+    gap: 3nw;
   }
-
+ .history-wrapper{
+    font-size: 3nw;
+  }
   .popup-dropdown a {
     font-size: 1rem;
   }
