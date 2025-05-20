@@ -63,8 +63,8 @@
 @media screen and (max-width: 600px) {
   .photo-gallery {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 3%;
+    grid-auto: 250px;
+    gap: 4%;
     padding: 2%;
   background-color: #f9f3e9;
   }
